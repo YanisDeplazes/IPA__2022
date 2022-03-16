@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="../dynamic.css">
+      <title>Layout</title>
+   </head>
+   <body>
+      <header>
+         <div class="flex base__padding horizontal align-items__center align-items__space-between">
+            <div class="header__title flex align-items__center">
+               <div class="hamburger" onclick="toggleMainnavigation()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <h4 class="inline-block">Web Dashboard</h4>
+            </div>
+            <div class="block-medium">
+               <form action="/" method="get" class="search flex align-items__center">
+                  <input type="text" name="s" id="search" value="" />
+                  <input type="image" alt="Search" src="../assets/img/search.svg" />
+               </form>
+            </div>
+            <div class="avatar"><img src="../assets/img/avatar.jpeg" alt="Avatar"></div>
+         </div>
+      </header>
+      <main class="project">
+         <aside class="navigation primary">
+            <div class="base__padding vertical horizontal">
+               <ul id="navigation-primary">
+                  <li id="my4214"><a href="../index.html">Übersicht</a></li>
+                  <li id="my3124"><a href="../lists/index.html">Inhalte</a></li>
+                  <li id="my2141" class="active"><a href="../project/index.html">Personen</a></li>
+                  <li id="my1232"><a href="../fonts/index.html">Fonts</a></li>
+               </ul>
+            </div>
+         </aside>
+         <div class="navigation secondary site-margin">
+            <div class="base__padding horizontal vertical">
+               <div class="block-small-only active flex align-items__center">
+                  <h5 class="active">Title 2</h5>
+                  <img onclick="toggleSecondnavigation('mobile')" src="../assets/img/collapse.svg" class="collapse mobile" alt="Collapse">
+               </div>
+               <ul class="block-medium" id="secondnavigation">
+                  <li class="active"><a>Kunden</a></li>
+                  <li><a>Mitarbeiter</a></li>
+               </ul>
+               <img onclick="toggleSecondnavigation('desktop')" src="../assets/img/collapse.svg" class="collapse desktop" alt="Collapse">
+            </div>
+         </div>
+         <div class="main__content flex-1">
+            <!--full-width for variable-->
+            <div class="base__padding horizontal vertical">
+               <section>
+                  <div class="box intro fullwidth-small">
+                     <div class="padding horizontal vertical">
+                        <h3 class="center-text">Competence</h3>
+                        <h5>Übersicht</h5>
+                        <hr class="fullwidth">
+                        <div class="loop-wrapper">
+                           <table class="loop simple">
+                              <tr>
+                                 <th class="overline">Url</th>
+                                 <td class="body-2 right-text"><a href="https://competence.ch" target="_blank">competence.ch</a></td>
+                              </tr>
+                              <tr>
+                                 <th class="overline">Stack</th>
+                                 <td class="body-2 right-text">LAMP</td>
+                              </tr>
+                              <tr>
+                                 <th class="overline">CMS</th>
+                                 <td class="body-2 right-text">Wordpress</td>
+                              </tr>
+                              <tr>
+                                 <th class="overline">Verantwortung</th>
+                                 <td class="body-2 right-text">Nico Caputi</td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="grid align-items__space-between">
+                  <div class="box">
+                     <div class="padding horizontal vertical">
+                        <h5>Kunde</h5>
+                        <hr class="fullwidth">
+                        <div class="loop-wrapper">
+                           <table class="loop simple">
+                              <tr>
+                                 <th class="overline">Firma</th>
+                                 <td class="body-2 right-text">Firma Name</td>
+                              </tr>
+                              <tr>
+                                 <th class="overline">Ansprechsperson</th>
+                                 <td class="body-2 right-text">Ansprechperson</td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box">
+                     <div class="padding horizontal vertical">
+                        <h5>Server</h5>
+                        <hr class="fullwidth">
+                        <div class="loop-wrapper">
+                           <table class="loop simple">
+                              <tr>
+                                 <th class="overline">FTP</th>
+                                 <td class="body-2 right-text">Hosttech</td>
+                              </tr>
+                              <tr>
+                                 <th class="overline">Datenbank</th>
+                                 <td class="body-2 right-text">Google Cloud</td>
+                              </tr>
+                              <tr>
+                                 <th class="overline">Domain</th>
+                                 <td class="body-2 right-text">Hosttech</td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box">
+                     <div class="padding horizontal vertical">
+                        <h5>Übersicht</h5>
+                        <hr class="fullwidth">
+                        <div class="loop-wrapper">
+                           <table class="loop simple">
+                              <tr>
+                                 <td class="body-2">Plugin 1</td>
+                              </tr>
+                              <tr>
+                                 <td class="body-2">Plugin 2</td>
+                              </tr>
+                              <tr>
+                                 <td class="body-2">Plugin 3</td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box">
+                     <div class="padding horizontal vertical">
+                        <h5>Übersicht</h5>
+                        <hr class="fullwidth">
+                        <div class="loop-wrapper">
+                           <table class="loop simple">
+                              <tr>
+                                 <td class="body-2">Plugin 1</td>
+                              </tr>
+                              <tr>
+                                 <td class="body-2">Plugin 2</td>
+                              </tr>
+                              <tr>
+                                 <td class="body-2">Plugin 3</td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box">
+                     <div class="padding horizontal vertical">
+                        <h5>Übersicht</h5>
+                        <hr class="fullwidth">
+                        <table class="loop simple">
+                           <tr>
+                              <td class="body-2">Plugin 1</td>
+                           </tr>
+                           <tr>
+                              <td class="body-2">Plugin 2</td>
+                           </tr>
+                           <tr>
+                              <td class="body-2">Plugin 3</td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </main>
+      <script src="../assets/js/navigation.js"></script>
+   </body>
+</html>

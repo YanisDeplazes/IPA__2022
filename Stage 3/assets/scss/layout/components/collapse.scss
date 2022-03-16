@@ -1,0 +1,24 @@
+@use "../../variables"as v;
+
+.collapse {
+	position: absolute;
+	/* ---Vorschlag 1: Ticket 5 von 19px auf 22px--- */
+	width: 22px;
+	height: 22px;
+
+	&.mobile {
+
+		transform: rotate(270deg);
+		bottom: var(--site-padding-v);
+		right: var(--site-padding-h);
+	}
+
+	&.desktop {
+		display: none;
+	}
+
+}
+
+.navigation.secondary .toggle .collapse.mobile {
+	transform: rotate(90deg);
+}

@@ -1,0 +1,8 @@
+@use "../variables"as v;
+
+/* ---Separators--- */
+
+hr {
+	border-bottom: unset;
+	border-top: 1px solid v.$color-layout-grey-50;
+}

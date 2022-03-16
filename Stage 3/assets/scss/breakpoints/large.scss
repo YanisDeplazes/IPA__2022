@@ -1,0 +1,10 @@
+@use '../variables'as v;
+
+@media (min-width: v.$breakpoint-large) {
+    .block-large {
+        display: block;
+    }
+
+    @import "large/font";
+
+}

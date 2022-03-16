@@ -1,0 +1,59 @@
+@use "../variables"as v;
+
+/* ---Block--- */
+.box {
+	background: white;
+}
+
+/* ---Padding--- */
+.box>.padding.vertical,
+.base__padding.vertical {
+	padding-top: var(--box-padding-v);
+	padding-bottom: var(--box-padding-v);
+}
+
+.loop>.padding.vertical {
+	padding-top: unset;
+	padding-bottom: unset;
+}
+
+.box>.padding.horizontal,
+.base__padding.horizontal {
+	padding-left: var(--box-padding-h);
+	padding-right: var(--box-padding-h);
+}
+
+.box {
+	border-top: 1px solid v.$color-layout-grey-50;
+	border-bottom: 1px solid v.$color-layout-grey-50;
+
+	&.intro {
+		& hr {
+			margin-block-start: 25px;
+
+		}
+
+		&>.padding.vertical {
+			padding-top: 0;
+		}
+	}
+
+	&+& {
+		border-top: 1px solid transparent;
+		/* ---Remove Double Borders--- */
+	}
+}
+
+.versionstatus .flex {
+	gap: 10px;
+}
+
+
+
+
+
+@media (max-width: v.$breakpoint-medium-max) {
+	.box.intro {
+		border: none;
+	}
+}

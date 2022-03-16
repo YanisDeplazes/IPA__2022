@@ -1,0 +1,211 @@
+@use "variables"as v;
+
+/* 
+
+Font-Import - 16
+Font-Size - 24
+Font-Lineheight - 64
+Font-Weight - 86
+Font-Uppercase-Spacing - 111
+Font-Color - 120
+Margin-Block-Start-and-End -148
+
+*/
+
+
+/* ---Font-Import--- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/* ---Font-Size--- */
+
+h1 {
+	font-size: 3.75em;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2.125em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5,
+h6,
+p,
+.subtitle-1,
+.subtitle-2,
+.subheading,
+.navigation.primary li,
+.navigation.secondary li {
+	font-size: 1em;
+}
+
+.body-2,
+button,
+.overline {
+	font-size: 0.875em;
+}
+
+.caption {
+	font-size: 0.75em;
+}
+
+
+/* ---Font-Lineheight--- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+.subtitle-2,
+.subheading,
+.overline,
+.subtitle-1,
+.body-2,
+.caption,
+.navigation.primary li,
+.navigation.secondary li {
+	line-height: 1.1667;
+}
+
+
+/* ---Font-Weight--- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.subtitle-2,
+.subheading,
+.overline,
+.navigation.primary li,
+.navigation.secondary li {
+	font-weight: 500;
+}
+
+p,
+.subtitle-1,
+.body-2,
+.caption {
+	font-weight: 400;
+}
+
+
+/* ---Font-Uppercase-Spacing--- */
+
+button,
+.overline {
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+
+/* ---Font-Color--- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navigation.secondary li {
+	color: v.$color-layout-dark;
+}
+
+p,
+.subtitle-2,
+.subheading,
+.overline,
+button,
+.subtitle-1,
+.body-2,
+.caption {
+	color: v.$color-layout-grey;
+}
+
+.pagination {
+	color: v.$color-layout-grey-50
+}
+
+.navigation.primary li {
+	color: v.$color-layout-grey-50
+}
+
+.navigation.primary li a,
+.navigation.secondary li a {
+	text-decoration: unset;
+	color: unset;
+}
+
+.navigation.primary li.active a {
+	color: v.$color-primary-sm;
+}
+
+.active,
+.navigation li.active {
+	color: v.$color-primary-sm;
+}
+
+/* ---Text Center--- */
+.center-text {
+	text-align: center;
+}
+
+.right-text {
+	text-align: right;
+}
+
+.loop th {
+	text-align: left;
+}
+
+/* ---Margin-Block-Start-and-End--- */
+
+.navigation.secondary h5 {
+	margin-block-start: 0px;
+	margin-block-end: unset;
+}
+
+.status.dot,
+.box h6 {
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+}
+
+.description tr {
+	margin-block-start: 5px;
+	margin-block-end: 5px;
+}
+
+.pagination {
+	margin-block-start: 25px;
+	margin-block-end: 25px;
+}
+
+.overline {
+	font-variant: all-small-caps;
+}
+
+/* ---Links No Style--- */
+a.nostyle {
+	color: unset;
+	text-decoration: none;
+}

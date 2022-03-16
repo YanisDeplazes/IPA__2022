@@ -1,0 +1,29 @@
+@use "../variables"as v;
+
+button {
+	background-color: v.$color-primary-sm;
+	border: none;
+	color: white;
+	border-radius: v.$border-radius-small;
+	border: 1px solid v.$color-primary-sm;
+	padding: 6px 40px;
+	margin-block-start: 5px;
+	margin-block-end: 5px;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		background-color: rgba(v.$color-primary-sm, .7);
+		border: 1px solid rgba(v.$color-primary-sm, .7);
+		cursor: pointer;
+	}
+
+	&.secondary {
+		background-color: unset;
+		color: v.$color-primary-sm;
+
+		&:hover {
+			background-color: unset;
+		}
+	}
+
+}

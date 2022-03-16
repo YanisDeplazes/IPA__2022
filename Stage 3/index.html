@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="loader.css">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="dynamic.css">
+      <title>Layout</title>
+   </head>
+   <body>
+      <header>
+         <div class="flex base__padding horizontal align-items__center align-items__space-between">
+            <div class="header__title flex align-items__center">
+               <div class="hamburger" onclick="toggleMainnavigation()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <h4 class="inline-block">Web Dashboard</h4>
+            </div>
+            <div class="block-medium">
+               <form action="/" method="get" class="search flex align-items__center">
+                  <input type="text" name="s" id="search" value="" />
+                  <input type="image" alt="Search" src="../assets/img/search.svg" />
+               </form>
+            </div>
+            <div class="avatar"><img src="../assets/img/avatar.jpeg" alt="Avatar"></div>
+         </div>
+      </header>
+      <main class="project">
+         <aside class="navigation primary">
+            <div class="base__padding vertical horizontal">
+               <ul id="navigation-primary">
+                  <li id="my4214" class="active"><a>Übersicht</a></li>
+                  <li id="my3124"><a href="lists/index.html">Inhalte</a></li>
+                  <li id="my2141"><a href="project/index.html">Personen</a></li>
+                  <li id="my1232"><a href="../fonts/index.html">Fonts</a></li>
+               </ul>
+            </div>
+         </aside>
+         <div class="main__content flex-1">
+            <!--full-width for variable-->
+            <div class="base__padding vertical horizontal">
+               <div class="loader"><div class="loader__animation"></div></div>
+               <section>
+                  <div class="box intro">
+                     <div class="padding horizontal vertical">
+                        <h1>Hallo, Yanis Deplazes</h1>
+                        <hr class="fullwidth">
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <div class="wrapper"><h4>Meine Aufgaben</h4></div>
+                  <div class="box">
+                     <div class="padding horizontal vertical">
+                        <h6>Test</h6>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <div class="wrapper"><h4>Version Status</h4></div>
+                  <div class="box versionstatus">
+                     <div class="padding horizontal vertical">
+                        <div class="flex align-items__center">
+                           <span class="status dot green"></span><h6>CMS</h6>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box versionstatus">
+                     <div class="padding horizontal vertical">
+                        <div class="flex align-items__center">
+                           <span class="status dot green"></span><h6>Server</h6>
+                        </div>
+                     </div>
+                  </div>                  
+               </section>
+            </div>
+         </div>
+      </main>
+      <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+         document.querySelector('.loader').classList.add("none")
+      });
+      </script>
+      <script src="assets/js/navigation.js"></script>
+   </body>
+</html>

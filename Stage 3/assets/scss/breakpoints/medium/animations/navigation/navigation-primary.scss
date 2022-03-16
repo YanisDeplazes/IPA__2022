@@ -1,0 +1,15 @@
+.navigation.primary {
+    &.toggle {
+        width: auto;
+
+        & li a {
+            display: inline-block;
+        }
+    }
+
+    &:hover li a {
+        display: inline-block;
+
+    }
+
+}

@@ -1,0 +1,7 @@
+@use '../variables'as v;
+
+@media (min-width: v.$breakpoint-extra-large) {
+	.block-extra-large {
+		display: block;
+	}
+}

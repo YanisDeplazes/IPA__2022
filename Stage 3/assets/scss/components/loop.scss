@@ -1,0 +1,104 @@
+@use "../variables"as v;
+
+/* ---Basics--- */
+
+tbody {
+    width: 100%;
+}
+
+.loop {
+    width: 100%;
+
+    &.main {
+
+
+        & tr {
+            border-top: 1px solid v.$color-layout-grey-50;
+            border-bottom: 1px solid v.$color-layout-grey-50;
+
+            &+tr {
+                border-top: 1px solid transparent;
+                /* Remove Double Borders */
+
+            }
+
+            &:first-child {
+                border-top: 1px solid transparent;
+            }
+        }
+
+    }
+
+}
+
+
+/* ---Mobile Only--- */
+@media (max-width: v.$breakpoint-medium-max) {
+
+    /* ---Basics--- */
+    .loop {
+        display: block;
+
+        & table {
+            & tr {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        &.simple {
+            & tr {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        &.main {
+            & table {
+                & thead {
+                    display: none;
+
+                }
+
+                & tr {
+                    gap: 10px;
+                    padding-top: var(--box-padding-v);
+                    padding-bottom: var(--box-padding-v);
+                }
+
+                & td {
+                    display: block;
+                    padding-left: var(--box-padding-h);
+                    padding-right: var(--box-padding-h);
+                    border-collapse: collapse;
+                }
+
+                & .details {
+                    position: absolute;
+                    top: var(--box-padding-v);
+                    right: calc(var(--box-padding-h) - 6px);
+                }
+
+                & tbody {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    /* Remove Double Borders */
+    .box.loop.main {
+        border-top: 0px solid v.$color-layout-grey-50;
+        border-bottom: 0px solid v.$color-layout-grey-50;
+    }
+
+}

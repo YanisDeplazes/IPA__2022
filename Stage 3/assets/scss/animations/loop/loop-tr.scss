@@ -1,0 +1,10 @@
+@use "../../variables"as v;
+
+.loop table tr:hover {
+    background-color: v.$color-layout-grey-8;
+}
+
+.loop table tr a:hover {
+    color: v.$color-layout-grey;
+    text-decoration: underline;
+}

@@ -1,0 +1,89 @@
+@use "../../variables"as v;
+
+.navigation {
+
+	& ul {
+		padding-inline-start: 0px;
+		list-style-type: none;
+		margin-block-start: 0em;
+		margin-block-end: 0em;
+	}
+
+	&.primary {
+		width: 0vw;
+		min-height: calc(100vh - v.$header-height);
+		height: auto;
+		position: fixed;
+		left: 0;
+		z-index: 99;
+		top: v.$header-height;
+		background-color: white;
+		overflow: hidden;
+		transition: width 0.1s ease-in-out;
+
+		& li {
+			display: flex;
+			gap: 10px;
+			justify-items: center;
+			height: v.$icon-height;
+			position: relative;
+			margin-block-start: 20px;
+			margin-block-end: 40px;
+
+			&::before {
+				content: '';
+				width: v.$icon-height;
+				height: v.$icon-height;
+				background: v.$color-layout-grey-20;
+				pointer-events: all;
+			}
+
+			&.active::before {
+				background: v.$color-primary-sm;
+			}
+
+			&.active::after {
+				width: 3px;
+				height: 34px;
+				background: v.$color-primary-sm;
+				content: " ";
+				position: absolute;
+				left: calc(0px - var(--site-padding-h));
+				top: calc(0px - ((34px - v.$icon-height)/ 2));
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+
+
+			}
+
+		}
+	}
+
+	&.secondary {
+		position: relative;
+		background-color: v.$color-layout-white;
+		box-shadow: inset 0 -1px 0 v.$color-layout-grey-50;
+
+		& .block-small-only {
+			gap: 10px;
+
+			&::before {
+				content: '';
+				width: v.$icon-height;
+				height: v.$icon-height;
+				background: v.$color-primary-sm;
+			}
+		}
+
+		& li {
+			margin-block-start: 20px;
+			margin-block-end: 20px;
+
+			&.active a {
+				display: none;
+			}
+		}
+
+	}
+
+}

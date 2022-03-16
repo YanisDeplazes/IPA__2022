@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="../dynamic.css">
+      <title>Layout</title>
+   </head>
+   <body>
+      <header>
+         <div class="flex base__padding horizontal align-items__center align-items__space-between">
+            <div class="header__title flex align-items__center">
+               <div class="hamburger" onclick="toggleMainnavigation()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <h4 class="inline-block">Web Dashboard</h4>
+            </div>
+            <div class="block-medium">
+               <form action="/" method="get" class="search flex align-items__center">
+                  <input type="text" name="s" id="search" value="" />
+                  <input type="image" alt="Search" src="../assets/img/search.svg" />
+               </form>
+            </div>
+            <div class="avatar"><img src="../assets/img/avatar.jpeg" alt="Avatar"></div>
+         </div>
+      </header>
+      <main class="project">
+         <aside class="navigation primary">
+            <div class="base__padding vertical horizontal">
+               <ul id="navigation-primary">
+                  <li id="my4214"><a href="../index.html">Übersicht</a></li>
+                  <li id="my3124"><a href="../lists/index.html">Inhalte</a></li>
+                  <li id="my2141"><a href="../project/index.html">Personen</a></li>
+                  <li id="my1232" class="active"><a href="../fonts/index.html">Fonts</a></li>
+               </ul>
+            </div>
+         </aside>
+         <div class="main__content flex-1">
+            <!--full-width for variable-->
+            <div class="base__padding vertical horizontal">
+               <section>
+                  <div class="wrapper">
+                     <span class="status green overline">Live</span>
+                     <span class="status orange overline">Development</span>
+                     <span class="status grey overline">Ice Box</span>
+                     <span class="status red overline">Emergency</span>
+                     <span class="status green overline">In Progress</span>
+                     <span class="status orange overline">Testing</span>
+                     <span class="status grey overline">Complete</span>
+                     <span class="status dot red"></span>
+                     <span class="status dot orange"></span>
+                     <span class="status dot green"></span>
+                     <div class="details"><span></span><span></span><span></span></div>
+                     <h1>Display 1</h1>
+                     <h2>Display 2</h2>
+                     <h3>Display 3</h3>
+                     <h4>Display 4</h4>
+                     <h5>Display 5+</h5>
+                     <span class="subtitle-1">Subtitle 1</span>
+                     <span class="subtitle-2">Subtitle 2</span>
+                     <p>Body 1</p>
+                     <p class="body-2">Body 2</p>
+                     <span class="subheading">Subheading</span>
+                     <span class="caption">Caption</span>
+                     <button>Button</button>
+                     <button class="secondary">Button</button>
+                     <span class="overline">Overline</span>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </main>
+      <script src="../assets/js/navigation.js"></script>
+   </body>
+</html>

@@ -1,0 +1,41 @@
+main button {
+    display: block;
+}
+
+/* ---Font-Margin-Block--- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+#my4214::before {
+    -webkit-mask: url('../assets/img/uebersicht.svg') no-repeat;
+    mask: url('../assets/img/uebersicht.svg') no-repeat;
+}
+
+#my3124::before {
+    -webkit-mask: url('../assets/img/inhalte.svg') no-repeat;
+    mask: url('../assets/img/inhalte.svg') no-repeat;
+}
+
+#my2141::before {
+    -webkit-mask: url('../assets/img/personen.svg') no-repeat;
+    mask: url('../assets/img/personen.svg') no-repeat;
+}
+
+#my1232::before {
+    -webkit-mask: url('../assets/img/scrum.svg') no-repeat;
+    mask: url('../assets/img/scrum.svg') no-repeat;
+}
+
+.navigation.secondary .block-small-only::before {
+    -webkit-mask: url('../assets/img/uebersicht.svg') no-repeat;
+    mask: url('../assets/img/uebersicht.svg') no-repeat;
+}

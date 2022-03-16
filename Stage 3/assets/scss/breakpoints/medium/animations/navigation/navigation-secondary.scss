@@ -1,0 +1,26 @@
+.navigation.secondary {
+    & li {
+        &:hover a {
+            background: v.$color-layout-grey-8;
+        }
+
+        &.active:hover a {
+            background: v.$color-primary-sm-20;
+        }
+
+    }
+
+    &.toggle {
+        width: 15px;
+
+        & ul {
+            display: none;
+
+        }
+
+        & .collapse.desktop {
+            transform: rotate(180deg);
+        }
+    }
+
+}

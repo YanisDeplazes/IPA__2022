@@ -1,0 +1,6 @@
+.collapse.desktop {
+    display: block;
+    right: calc(9px - var(--site-padding-h));
+    top: var(--site-padding-v);
+    transform: rotate(0deg);
+}

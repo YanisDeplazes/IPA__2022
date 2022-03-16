@@ -1,0 +1,130 @@
+:root {
+	--site-padding-h: 17px;
+	--site-padding-v: 15px;
+	--box-padding-h: 17px;
+	--box-padding-v: 20px;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	height: 100%;
+}
+
+/*---Base Paddings---*/
+.base__padding.horizontal {
+	padding-left: var(--site-padding-h);
+	padding-right: var(--site-padding-h);
+}
+
+.base__padding.vertical {
+	padding-top: var(--site-padding-v);
+	padding-bottom: var(--site-padding-v);
+}
+
+/*---Base Displays---*/
+.flex {
+	display: flex;
+
+	&-1 {
+		flex: 1;
+	}
+
+	/*---Base Flex Orders---*/
+	& .order {
+		&1 {
+			order: 1;
+		}
+
+		&2 {
+			order: 2;
+		}
+
+		&3 {
+			order: 3;
+		}
+
+		&4 {
+			order: 4;
+		}
+
+		&5 {
+			order: 5;
+		}
+
+		&6 {
+			order: 6;
+		}
+
+		&7 {
+			order: 7;
+		}
+
+		&8 {
+			order: 8;
+		}
+
+	}
+
+	&.align-items__center {
+		align-items: center;
+	}
+
+	&.align-items__space-between {
+		justify-content: space-between;
+	}
+}
+
+.grid {
+	display: grid;
+}
+
+.none {
+	display: none;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.block {
+
+	&-medium,
+	&-large,
+	&-extra-large {
+		display: none;
+	}
+}
+
+/*---Base Blocks---*/
+.main__content {
+	min-height: calc(100vh - v.$header-height - v.$icon-height - 2 * var(--site-padding-v));
+}
+
+section {
+	margin-block-end: 50px;
+}
+
+td {
+	border-spacing: 10px;
+}
+
+/*---Mobile Only---*/
+
+@media (max-width: v.$breakpoint-medium-max) {
+
+	/*---Remove Content on Mobile when Primary Navigation is toggle---*/
+	main.mainnavigationtoggle .navigation.secondary,
+	main.mainnavigationtoggle .main__content {
+		display: none;
+	}
+
+
+	/*---Add a Wrapper for Mobile---*/
+	section .wrapper {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

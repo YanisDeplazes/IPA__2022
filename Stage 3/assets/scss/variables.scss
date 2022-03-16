@@ -1,0 +1,45 @@
+/* $-Variables$- */
+
+$color-primary-sm: #009BA9;
+$color-primary-sm-20: #CCEBEE;
+$color-primary-pom: #E20072;
+$color-primary-pom-20: #F9CCE3;
+$color-orange: #FFC107;
+$color-orange-20: #F9EDC9;
+$color-red: #E84597;
+$color-red-20: #FADAEA;
+$color-green: #03DAC5;
+$color-green-20: #C2EDEB;
+$color-layout-dark: #19000E;
+$color-layout-grey: #7A7175;
+$color-layout-grey-50: #BCB8BA;
+$color-layout-grey-20: #E4E3E3;
+$color-layout-grey-8: #F4F4F4;
+$color-layout-white: #FFFFFF;
+
+$header-height: 70px;
+$icon-height: 19px;
+
+$breakpoint-small: 360px;
+/* Landsape Phones 360px and up */
+$breakpoint-medium: 768px;
+/* Tablets 768px and up */
+$breakpoint-large: 1366px;
+/* Laptops 1366px and up */
+$breakpoint-extra-large: 1920px;
+/* Desktop 1920px and up */
+
+
+$breakpoint-small-max: $breakpoint-small - 1;
+/* Landsape Phones 360px and up */
+$breakpoint-medium-max: $breakpoint-medium - 1;
+/* Tablets 768px and up */
+$breakpoint-large-max: $breakpoint-large - 1;
+/* Laptops 1366px and up */
+$breakpoint-extra-large-max: $breakpoint-extra-large - 1;
+/* Desktop 1920px and up */
+
+
+$border-radius-large: 12px;
+$border-radius-small: 5px;
+$border-radius-extra-small: 4px;

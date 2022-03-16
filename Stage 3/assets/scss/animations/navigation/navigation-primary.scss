@@ -1,0 +1,20 @@
+@use "../../variables"as v;
+
+
+.navigation.primary {
+	& li:hover {
+		color: v.$color-layout-dark;
+
+		&::before {
+			background: v.$color-layout-dark;
+		}
+	}
+
+	& i.active:hover::before {
+		background: v.$color-primary-sm;
+	}
+
+	&.toggle {
+		width: 100vw;
+	}
+}

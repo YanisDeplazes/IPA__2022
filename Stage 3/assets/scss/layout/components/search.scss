@@ -1,0 +1,27 @@
+@use "../../variables"as v;
+
+.search {
+	position: relative;
+
+	&>input[type="text"] {
+		background-color: v.$color-layout-grey-8;
+		width: 370px;
+		height: 40px;
+		border-radius: v.$border-radius-small;
+		border: unset;
+		padding-left: 48px;
+		padding-right: 10px;
+		transition: background-color 0.1s ease-in-out;
+
+		&:focus-visible {
+			background-color: v.$color-layout-grey-20;
+			outline: unset;
+		}
+	}
+
+	&>input[type="image"] {
+		position: absolute;
+		left: 15px;
+	}
+
+}

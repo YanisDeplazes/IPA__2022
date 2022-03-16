@@ -1,0 +1,55 @@
+@use '../../../variables'as v;
+
+:root {
+	--site-padding-h: 20px;
+	--site-padding-v: 30px;
+	--box-padding-h: 20px;
+	--box-padding-v: 20px;
+}
+
+.block {
+	&-medium {
+		display: block;
+	}
+
+	&-small-only {
+		display: none;
+
+	}
+}
+
+
+
+/* ---Layout-Main--- */
+main {
+	display: flex;
+	background-color: v.$color-layout-grey-8;
+}
+
+.main__content {
+	height: calc(100vh - v.$header-height);
+	overflow: auto;
+	width: 100%;
+
+	&.full-width>div {
+		max-width: 100%;
+	}
+
+	&.flex-1>div {
+		width: auto;
+	}
+
+	&>div {
+		max-width: 960px;
+		margin: auto;
+	}
+}
+
+
+/* ---Grid for Boxes--- */
+section.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	gap: 15px;
+	justify-items: center;
+}

@@ -1,0 +1,52 @@
+@use "../variables"as v;
+
+.status {
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+
+	&.overline {
+		width: auto;
+		display: inline-block;
+		padding: 2px 8px;
+		border-radius: v.$border-radius-extra-small;
+	}
+
+	&.grey {
+		background-color: v.$color-layout-grey-20;
+		color: v.$color-layout-grey;
+	}
+
+	&.red {
+		background-color: v.$color-red-20;
+		color: v.$color-red;
+
+		&.dot {
+			background-color: v.$color-red
+		}
+	}
+
+	&.orange {
+		background-color: v.$color-orange-20;
+		color: v.$color-orange;
+
+		&.dot {
+			background-color: v.$color-orange
+		}
+	}
+
+	&.green {
+		background-color: v.$color-green-20;
+		color: v.$color-green;
+
+		&.dot {
+			background-color: v.$color-green
+		}
+	}
+
+	&.dot {
+		height: 9px;
+		width: 9px;
+		border-radius: 100%;
+		display: inline-block;
+	}
+}

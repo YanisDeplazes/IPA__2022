@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../styles.css">
+      <link rel="stylesheet" href="../dynamic.css">
+      <title>Layout</title>
+   </head>
+   <body class="page__loop">
+      <header>
+         <div class="flex base__padding horizontal align-items__center align-items__space-between">
+            <div class="header__title flex align-items__center">
+               <div class="hamburger" onclick="toggleMainnavigation()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <h4 class="inline-block">Web Dashboard</h4>
+            </div>
+            <div class="block-medium">
+               <form action="/" method="get" class="search flex align-items__center">
+                  <input type="text" name="s" id="search" value="" />
+                  <input type="image" alt="Search" src="../assets/img/search.svg" />
+               </form>
+            </div>
+            <div class="avatar"><img src="../assets/img/avatar.jpeg" alt="Avatar"></div>
+         </div>
+      </header>
+      <main>
+         <aside class="navigation primary">
+            <div class="base__padding vertical horizontal">
+               <ul id="navigation-primary">
+                  <li id="my4214"><a href="../index.html">Übersicht</a></li>
+                  <li id="my3124" class="active"><a href="../lists/index.html">Inhalte</a></li>
+                  <li id="my2141"><a href="../project/index.html">Personen</a></li>
+                  <li id="my1232"><a href="../fonts/index.html">Fonts</a></li>
+               </ul>
+            </div>
+         </aside>
+         <div class="navigation secondary site-margin">
+            <div class="base__padding horizontal vertical">
+               <div class="block-small-only active flex align-items__center">
+                  <h5 class="active">Versionen</h5>
+                  <img onclick="toggleSecondnavigation('mobile')" src="../assets/img/collapse.svg" class="collapse mobile" alt="Collapse">
+               </div>
+               <ul class="block-medium" id="secondnavigation">
+                  <li><a href="index.html">Projekte</a></li>
+                  <li><a href ="plugins.html">Plugins</a></li>
+                  <li><a href="servers.html">Servers</a></li>
+                  <li class="active"><a href="versionen.html">Versionen</a></li>
+               </ul>
+               <img onclick="toggleSecondnavigation('desktop')" src="../assets/img/collapse.svg" class="collapse desktop" alt="Collapse">
+            </div>
+         </div>
+         <div class="main__content flex-1 full-width">
+            <!--full-width for variable-->
+            <div class="base__padding vertical horizontal">
+               <section class="versionstatus"><div class="wrapper"><h4 class="flex align-items__center"><span class="status dot orange"></span>CMS</h4></div></section>
+               <div class="box loop main">
+                     <div class="loop-wrapper">
+                        <table class="loop">
+                           <thead>
+                              <tr>
+                                 <th class="overline">Name</th>
+                                 <th class="overline">CMS</th>
+                                 <th class="overline">Version</th>
+                                 <th></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="order2">
+                                    <h6>Projektname</h6>
+                                 </td>
+                                 <td class="order3 body-2">Wordpress | 8.1</td>
+                                 <td class="order1"><span class="status orange overline">7.1</span></td>
+                                 <td class="right-text order4">
+                                    <div class="details-wrapper"><div class="details"><span></span><span></span><span></span></div></div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                     <div class="table__footer right-text overline">
+                        <div class="base__padding horizontal">
+                           <div class="pagination flex align-items__center">
+                              Seite 2 von 5  <img src="../assets/img/previous.svg" alt="Previous"> <img src="../assets/img/next.svg" alt="Next">
+                           </div>
+                        </div>
+                     </div>
+               </div>
+
+               <section class="versionstatus"><div class="wrapper"><h4 class="flex align-items__center"><span class="status dot orange"></span>Server</h4></div></section>
+               <div class="box loop main">
+                     <div class="loop-wrapper">
+                        <table class="loop">
+                           <thead>
+                              <tr>
+                                 <th class="overline">Name</th>
+                                 <th class="overline">Kundenname</th>
+                                 <th class="overline">Status</th>
+                                 <th></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="order2">
+                                    <h6>Server X / Y</h6>
+                                 </td>
+                                 <td class="order3 body-2">PHP | 8.1</td>
+                                 <td class="order1"><span class="status red overline">7.1</span></td>
+                                 <td class="right-text order4">
+                                    <div class="details-wrapper"><div class="details"><span></span><span></span><span></span></div></div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     
+                     <div class="table__footer right-text overline">
+                        <div class="base__padding horizontal">
+                           <div class="pagination flex align-items__center">
+                              <div>Seite 2 von 5</div>  <img src="../assets/img/previous.svg" alt="Previous"> <img src="../assets/img/next.svg" alt="Next">
+                           </div>
+                        </div>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="../assets/js/navigation.js"></script>
+   </body>
+</html>

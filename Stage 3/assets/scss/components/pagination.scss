@@ -1,0 +1,11 @@
+@use "../variables"as v;
+
+.pagination {
+    gap: 10px;
+    justify-content: center;
+
+    & img {
+        height: 8px;
+        width: 8px;
+    }
+}

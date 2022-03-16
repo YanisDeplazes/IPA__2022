@@ -1,0 +1,25 @@
+@use "../variables"as v;
+
+.details {
+	width: 4px;
+	display: inline-flex;
+	flex-direction: column;
+	gap: 2px;
+	cursor: pointer;
+	padding-left: 6px;
+	padding-right: 6px;
+
+	& span {
+		background-color: v.$color-layout-grey-50;
+		border-radius: v.$border-radius-extra-small;
+		width: 4px;
+		height: 4px;
+		margin: 0;
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	&:hover span {
+		background-color: v.$color-layout-grey;
+
+	}
+}

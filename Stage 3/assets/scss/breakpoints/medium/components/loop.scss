@@ -1,0 +1,47 @@
+/* ---Loop--- */
+
+.loop {
+
+    &.main {
+        & table {
+            padding: 50px 50px;
+            border-collapse: collapse;
+
+            & thead {
+                & tr {
+
+                    &:hover {
+                        background: unset;
+                    }
+                }
+            }
+
+            & th,
+            & td {
+                padding-left: var(--box-padding-v);
+                padding-right: var(--box-padding-v);
+            }
+
+            & td {
+                padding-top: 22px;
+                padding-bottom: 22px;
+            }
+
+            & th {
+
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+
+            & .details-wrapper .details {
+                position: relative;
+                right: -6px;
+            }
+        }
+    }
+
+    &-wrapper {
+        overflow-x: auto;
+
+    }
+}

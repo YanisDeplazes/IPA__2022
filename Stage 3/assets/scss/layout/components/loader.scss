@@ -1,0 +1,31 @@
+@use "../../variables"as v;
+
+.loader {
+	height: calc(100vh - v.$header-height);
+	width: 100vw;
+	background-color: v.$color-layout-grey-8;
+	position: absolute;
+	left: 0;
+	top: v.$header-height;
+	overflow: hidden;
+
+	& .loader__animation {
+		height: 4px;
+		width: 25vw;
+		background: v.$color-primary-sm;
+		animation-name: loading;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
+
+@keyframes loading {
+	0% {
+		margin-left: -25vw;
+	}
+
+	100% {
+		margin-left: 100vw;
+	}
+}

@@ -1,0 +1,25 @@
+@use "../../variables"as v;
+
+.hamburger {
+	position: relative;
+	height: 35px;
+	width: 35px;
+	border-radius: v.$border-radius-small;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3px;
+	left: -6px;
+
+	&>div {
+		width: 23px;
+		height: 2px;
+		background: v.$color-layout-grey;
+	}
+
+	&:hover {
+		background: v.$color-primary-sm-20;
+
+	}
+}
