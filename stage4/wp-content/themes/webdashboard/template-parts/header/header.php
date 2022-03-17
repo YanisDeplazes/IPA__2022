@@ -11,9 +11,9 @@
       <div class="block-medium">
          <form action="/" method="get" class="search flex align-items__center">
             <input type="text" name="s" id="search" value="" />
-            <input type="image" alt="Search" src="../assets/img/search.svg" />
+            <input type="image" alt="Search" src="<?php echo get_template_directory_uri();?>/assets/images/search.svg" />
          </form>
       </div>
-      <div class="avatar"><img src="../assets/img/avatar.jpeg" alt="Avatar"></div>
+      <div class="avatar"><img src="<?php echo get_template_directory_uri();?>/assets/images/avatar.jpeg" alt="Avatar"></div>
    </div>
 </header>
