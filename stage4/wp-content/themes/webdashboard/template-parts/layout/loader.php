@@ -1,0 +1,1 @@
+<?php echo '<div class="loader"><div class="loader__animation"></div></div>';?>
