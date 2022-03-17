@@ -1,0 +1,1 @@
+<?php echo '<div class="box versionstatus"><div class="padding horizontal vertical"><div class="flex align-items__center"><span class="status dot green"></span><h6>' . $args['version'] . '</h6></div></div></div>'?>
