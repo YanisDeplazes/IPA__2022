@@ -1,0 +1,21 @@
+.navigation.primary {
+    &.toggle {
+        width: auto;
+
+        & li a {
+            display: inline-block;
+        }
+    }
+
+    &:hover li {
+        & a {
+            display: inline-block;
+        }
+
+        &.active::before {
+            background-color: v.$color-primary-sm;
+        }
+
+    }
+
+}

@@ -16,8 +16,8 @@ span {
 }
 
 #my4214::before {
-    -webkit-mask: url('../assets/img/uebersicht.svg') no-repeat;
-    mask: url('../assets/img/uebersicht.svg') no-repeat;
+    -webkit-mask: url('assets/img/uebersicht.svg') no-repeat;
+    mask: url('assets/img/uebersicht.svg') no-repeat;
 }
 
 #my3124::before {
