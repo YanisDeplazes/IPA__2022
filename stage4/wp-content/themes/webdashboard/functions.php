@@ -54,7 +54,7 @@ function v_forcelogin()
 add_action("init", "v_forcelogin");
 
 /*
- * Creating a function to create our CPT
+ * Creating a function to create our CPT and Custom Taxonomies
  */
 
 function custom_post_type()
@@ -75,7 +75,7 @@ function custom_post_type()
             "add_new_item" => "Neue Kategorie hinzufügen",
             "new_item_name" => "Neue Kategorie Name",
             "menu_name" => "Kategorien",
-            "slug" => "categoriesperson", // This controls the base slug that will display before each term
+            "slug" => "personen", // This controls the base slug that will display before each term
             "with_front" => false, // Don't display the category base before "/locations/"
             "hierarchical" => true, // This will allow URL's like "/locations/boston/cambridge/"
             "location" => "personen",
@@ -93,10 +93,28 @@ function custom_post_type()
             "add_new_item" => "Neue Kategorie hinzufügen",
             "new_item_name" => "Neue Kategorie Name",
             "menu_name" => "Kategorien",
-            "slug" => "categoriesobject", // This controls the base slug that will display before each term
+            "slug" => "objekte", // This controls the base slug that will display before each term
             "with_front" => false, // Don't display the category base before "/locations/"
             "hierarchical" => true, // This will allow URL's like "/locations/boston/cambridge/"
             "location" => "objekte",
+        ],
+		[
+			"hierarchical" => true,
+            "name" => "Funktionen",
+            "singular_name" => "Funktion",
+            "search_items" => "Funktion suchen",
+            "all_items" => "Alle Funktionen",
+            "parent_item" => "Parent Funktionen",
+            "parent_item_colon" => "Parent Funktionen:",
+            "edit_item" => "Funktion bearbeiten",
+            "update_item" => "Funktion bearbeiten",
+            "add_new_item" => "Neue Funktion hinzufügen",
+            "new_item_name" => "Neue Funktion Name",
+            "menu_name" => "Funktionen",
+            "slug" => "funktionen", // This controls the base slug that will display before each term
+            "with_front" => false, // Don't display the category base before "/locations/"
+            "hierarchical" => true, // This will allow URL's like "/locations/boston/cambridge/"
+            "location" => "personen",
         ],
     ];
 
