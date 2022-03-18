@@ -1,0 +1,107 @@
+/*Change Background Color and Import Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    background-color: #F4F4F4;
+    font-family: 'Roboto', sans-serif !important;
+
+}
+
+/*Change Logo*/
+
+.login h1 a {
+    background-image: url("https://www.stutz-medien.ch/sites/default/files/logo_sm_rgb_small.svg");
+    background-size: contain;
+    height: 150px;
+    width: 150px !important;
+}
+
+/*Style Form like Box*/
+
+.login form {
+    border: 1px solid #BCB8BA;
+    border-radius: 12px;
+    box-shadow: none;
+
+}
+
+/*Change Font Color*/
+
+.login label,
+.login .message,
+.login #backtoblog a,
+.login #nav a {
+    color: #7a7175;
+}
+
+/*Font Style*/
+
+.login label {
+    font-size: .875em;
+    line-height: 1.1667;
+    letter-spacing: .02em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-variant: all-small-caps;
+
+}
+
+.login #backtoblog a,
+.login #nav a {
+    font-size: 1em
+}
+
+
+/*Button Style */
+.wp-core-ui .button.button-large {
+    background-color: #009BA9;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #009BA9;
+    padding: 6px 40px;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    transition: all 0.2s ease-in-out;
+    font-size: .875em;
+    line-height: 1.1667;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .02em
+}
+
+.wp-core-ui .button.button-large:hover {
+    background-color: rgba(0, 155, 169, .7);
+    border: 1px solid rgba(0, 155, 169, .7);
+    cursor: pointer;
+}
+
+/*Custom Color for message */
+.login .message {
+    border-left: 4px solid #009BA9;
+}
+
+/*Change Form Input Fields like Header input field */
+.login form .input,
+.login form input[type=checkbox],
+.login input[type=text] {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    transition: background-color .1s ease-in-out;
+}
+
+.login form .input:focus-visible,
+.login form input[type=checkbox]:focus-visible,
+.login input[type=text]:focus-visible {
+    background-color: #e4e3e3;
+    outline: unset;
+    box-shadow: unset;
+}
+
+
+
+.login form input[type=checkbox] {
+    box-shadow: unset;
+}
