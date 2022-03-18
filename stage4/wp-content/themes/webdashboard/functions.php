@@ -180,6 +180,7 @@ function custom_post_type()
             "publicly_queryable" => true,
             "capability_type" => "post",
             "show_in_rest" => true,
+			"menu_icon" => "https://www.stutz-medien.ch/sites/default/files/inhalte.svg",
         ],
 
         [
@@ -220,6 +221,7 @@ function custom_post_type()
             "publicly_queryable" => true,
             "capability_type" => "post",
             "show_in_rest" => true,
+			"menu_icon" => "https://www.stutz-medien.ch/sites/default/files/personen.svg",
         ],
     ];
     foreach ($customposttypes as $customposttype) {
@@ -286,6 +288,8 @@ function custom_post_type()
             "publicly_queryable" => $customposttype["publicly_queryable"],
             "capability_type" => $customposttype["capability_type"],
             "show_in_rest" => $customposttype["show_in_rest"],
+			"menu_icon" => $customposttype["menu_icon"],
+
         ];
 
         // Registering your Custom Post Type
