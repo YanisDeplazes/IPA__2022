@@ -8,3 +8,4 @@ stage4/wp-content/themes/webdashboard/template-parts/navigation/.keep
 stage4/wp-content/themes/webdashboard/assets/.DS_Store
 stage4/wp-content/themes/.DS_Store
 .DS_Store
+stage4/.htaccess
