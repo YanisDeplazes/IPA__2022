@@ -37,4 +37,146 @@ function v_getUrl() {
   }
   add_action('init', 'v_forcelogin');
 
+  
+ /*
+* Creating a function to create our CPT
+*/
+
+function custom_post_type() {
+	$templatename = 'projektmanagementdashboard';
+	 /*
+	* Define new Custom Post Types 
+		 */
+
+	$customposttypes = array (
+		array(
+			'name'                => 'Movies',
+			'singular_name'       => 'Movie',
+			'menu_name'           => 'Movies',
+			'parent_item_colon'   => 'Parent Movie',
+			'all_items'           => 'All Movies',
+			'view_item'           => 'View Movie',
+			'add_new_item'        => 'Add New Movie',
+			'add_new'             => 'Add New',
+			'edit_item'           => 'Edit Movie',
+			'update_item'         => 'Update Movie',
+			'search_items'        => 'Search Movie',
+			'not_found'           => 'Not Found',
+			'not_found_in_trash'  => 'Not found in Trash',
+			'label'               => 'movies',
+			'description'         => 'Beschreibung',
+			'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+			'taxonomies'          => array( 'genres' ),
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 5,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'post',
+			'show_in_rest' => true
+
+		),
+
+		array(
+			'name'                => 'Filme',
+			'singular_name'       => 'Film',
+			'menu_name'           => 'Filme',
+			'parent_item_colon'   => 'Parent Movie',
+			'all_items'           => 'All Movies',
+			'view_item'           => 'View Movie',
+			'add_new_item'        => 'Add New Movie',
+			'add_new'             => 'Add New',
+			'edit_item'           => 'Edit Movie',
+			'update_item'         => 'Update Movie',
+			'search_items'        => 'Search Movie',
+			'not_found'           => 'Not Found',
+			'not_found_in_trash'  => 'Not found in Trash',
+			'label'               => 'filme',
+			'description'         => 'Beschreibung',
+			'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+			'taxonomies'          => array( 'genres' ),
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 6,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'post',
+			'show_in_rest' => true
+
+		)
+	  );
+	  foreach ($customposttypes as $customposttype ) {
+
+		$labels = array(
+			'name'                => _x( $customposttype['name'], 'Post Type General Name', $templatename ),
+			'singular_name'       => _x( $customposttype['singular_name'], 'Post Type Singular Name', $templatename ),
+			'menu_name'           => __( $customposttype['menu_name'], $templatename ),
+			'parent_item_colon'   => __( $customposttype['parent_item_colon'], $templatename ),
+			'all_items'           => __( $customposttype['all_items'], $templatename ),
+			'view_item'           => __( $customposttype['view_item'], $templatename ),
+			'add_new_item'        => __( $customposttype['add_new_item'], $templatename ),
+			'add_new'             => __( $customposttype['add_new'], $templatename ),
+			'edit_item'           => __( $customposttype['edit_item'], $templatename ),
+			'update_item'         => __( $customposttype['update_item'], $templatename ),
+			'search_items'        => __( $customposttype['search_items'], $templatename ),
+			'not_found'           => __( $customposttype['not_found'], $templatename ),
+			'not_found_in_trash'  => __( $customposttype['not_found_in_trash'], $templatename ),
+		);
+		 
+	// Set other options for Custom Post Type
+		 
+		$args = array(
+			'label'               => __( $customposttype['label'], $templatename ),
+			'description'         => __( $customposttype['description'], $templatename ),
+			'labels'              => $labels,
+			// Features this CPT supports in Post Editor
+			'supports'            => $customposttype['supports'],
+			// You can associate this CPT with a taxonomy or custom taxonomy. 
+			'taxonomies'          => $customposttype['supports'],
+			/* A hierarchical CPT is like Pages and can have
+			* Parent and child items. A non-hierarchical CPT
+			* is like Posts.
+			*/ 
+			'hierarchical'        =>  $customposttype['hierarchical'],
+			'public'              =>  $customposttype['public'],
+			'show_ui'             =>  $customposttype['show_ui'],
+			'show_in_menu'        =>  $customposttype['show_in_menu'],
+			'show_in_nav_menus'   =>  $customposttype['show_in_nav_menus'],
+			'show_in_admin_bar'   =>  $customposttype['show_in_admin_bar'],
+			'menu_position'       =>  $customposttype['menu_position'],
+			'can_export'          =>  $customposttype['can_export'],
+			'has_archive'         =>  $customposttype['has_archive'],
+			'exclude_from_search' =>  $customposttype['exclude_from_search'],
+			'publicly_queryable'  =>  $customposttype['publicly_queryable'],
+			'capability_type'     =>  $customposttype['capability_type'],
+			'show_in_rest' => $customposttype['show_in_rest'],
+	 
+		);
+		 
+		// Registering your Custom Post Type
+		register_post_type( $customposttype['label'], $args );
+	}
+	 
+	}
+	 
+	/* Hook into the 'init' action so that the function
+	* Containing our post type registration is not 
+	* unnecessarily executed. 
+	*/
+	 
+	add_action( 'init', 'custom_post_type', 0 );
+	
+
 ?>
