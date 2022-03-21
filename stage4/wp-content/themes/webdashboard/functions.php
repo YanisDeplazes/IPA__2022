@@ -333,9 +333,23 @@ function register_my_menus() {
 	register_nav_menus(
 	  array(
 		'navigation-primary' => __( 'Primary Navigation' ),
+        'navigation-secondary-inhalte' => __( 'Secondary Navigation Inhalte' ),
+        'navigation-secondary-personen' => __( 'Secondary Navigation Personen' ),
 	  )
 	);
   }
   add_action( 'init', 'register_my_menus' );
+
+
+  /* Adding SVG Support for File Upload
+ */
+
+  function add_file_types_to_uploads($file_types){
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes );
+    return $file_types;
+    }
+    add_filter('upload_mimes', 'add_file_types_to_uploads');
 
 ?>
