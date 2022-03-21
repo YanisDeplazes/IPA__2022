@@ -4,7 +4,7 @@
             background: v.$color-layout-grey-8;
         }
 
-        &.active:hover a {
+        &.current-menu-item:hover a {
             background: v.$color-primary-sm-20;
         }
 

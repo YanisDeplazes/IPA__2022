@@ -33,7 +33,7 @@
 				left: -20px;
 			}
 
-			&.active a {
+			&.current-menu-item a {
 				display: list-item;
 				background-color: v.$color-primary-sm-20;
 			}

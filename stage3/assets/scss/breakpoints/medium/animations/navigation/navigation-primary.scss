@@ -12,7 +12,7 @@
             display: inline-block;
         }
 
-        &.active::before {
+        &.current-menu-item::before {
             background-color: v.$color-primary-sm;
         }
 

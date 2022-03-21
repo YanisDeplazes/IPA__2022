@@ -155,12 +155,12 @@ button,
 	color: unset;
 }
 
-.navigation.primary li.active a {
+.navigation.primary li.current-menu-item a {
 	color: v.$color-primary-sm;
 }
 
-.active,
-.navigation li.active {
+.current-menu-item,
+.navigation li.current-menu-item {
 	color: v.$color-primary-sm;
 }
 
