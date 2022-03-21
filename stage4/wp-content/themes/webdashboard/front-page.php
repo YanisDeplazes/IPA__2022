@@ -7,8 +7,8 @@
     */
    
    get_header();
-   $current_user = wp_get_current_user();
-   $user_name = $current_user->user_firstname . ' ' . $current_user->user_lastname;
+   $current_user = wp_get_current_user(); /* Get User */
+   $user_name = $current_user->user_firstname . ' ' . $current_user->user_lastname; /* First + Lastname */
    
    echo '<main class="project">';
    get_template_part( 'template-parts/navigation/primary', 'primary' ); /* Loading Primary Navigation */
