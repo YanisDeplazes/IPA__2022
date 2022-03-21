@@ -327,4 +327,15 @@ add_action("init", "custom_post_type", 0);
 
 
 add_filter( 'show_admin_bar', '__return_false' );
+
+
+function register_my_menus() {
+	register_nav_menus(
+	  array(
+		'navigation-primary' => __( 'Primary Navigation' ),
+	  )
+	);
+  }
+  add_action( 'init', 'register_my_menus' );
+
 ?>
