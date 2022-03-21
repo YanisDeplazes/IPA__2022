@@ -93,7 +93,7 @@ function custom_post_type()
             "add_new_item" => "Neue Kategorie hinzufügen",
             "new_item_name" => "Neue Kategorie Name",
             "menu_name" => "Kategorien",
-            "slug" => "objekte", // This controls the base slug that will display before each term
+            "slug" => "obj", // This controls the base slug that will display before each term
             "with_front" => false, // Don't display the category base before "/locations/"
             "hierarchical" => true, // This will allow URL's like "/locations/boston/cambridge/"
             "location" => "objekte",
@@ -187,7 +187,7 @@ function custom_post_type()
                 "revisions",
                 "custom-fields",
             ],
-            "taxonomies" => ["objekte"],
+            "taxonomies" => ["obj"],
             "hierarchical" => true,
             "public" => true,
             "show_ui" => true,
