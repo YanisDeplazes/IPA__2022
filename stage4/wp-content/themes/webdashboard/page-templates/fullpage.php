@@ -1,9 +1,6 @@
 <?php
-   /**
-    * If there is a front-page.php file in the theme, this template is always used for the start page. Without the template file, either home.php (blog index) or page.php (static start page) is loaded as normal.
-    *
-    * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#home-page-display
-    *
+   /*
+    * Template Name: Full Width Page
     */
    
    get_header();
@@ -13,7 +10,7 @@
    echo '<main class="project">';
    get_template_part( 'template-parts/navigation/primary', 'primary' ); /* Loading Primary Navigation */
    get_template_part( 'template-parts/navigation/secondary', 'secondary' ) ; /* Loading Secondary Navigation */
-   get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start', 'fullwidth'   => false) );  /* Loading Beginning of main__Content */
+   get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start', 'fullwidth'   => true) );  /* Loading Beginning of main__Content */
    get_template_part( 'template-parts/layout/loader', 'loader'); /* Loading Loader  */
    get_template_part( 'template-parts/page/sections/sectionwrapper', 'sectionwrapper', array('key'   => 'intro' , 'box' => true , 'content'   => array('<h1>Hallo, '. $user_name  .'</h1><hr class="fullwidth">') ) ); /* Intro Box */
    get_template_part( 'template-parts/page/sections/sectionwrapper', 'sectionwrapper', array('key'   => 'versionstatus' , 'box' => true , 'title'   => 'Version Status', 'content'   => array("CMS", "Server") ) ); /* Version Status  */
