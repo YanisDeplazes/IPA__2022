@@ -1,26 +1,32 @@
+<?php 
+
+$id = get_the_ID();
+$menu_icon = get_field( "menu_icon",  $id); 
+?>
+
 <style>
-#my4214::before {
+#menu-item-60::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
 }
 
-#my3124::before {
+#menu-item-59::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/inhalte.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/inhalte.svg') no-repeat;
 }
 
-#my2141::before {
+#menu-item-58::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/personen.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/personen.svg') no-repeat;
 }
 
-#my1232::before {
+#menu-item-57::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/scrum.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/scrum.svg') no-repeat;
 }
 
 .navigation.secondary .block-small-only::before {
-    -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
-    mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
+    -webkit-mask: url('<?php echo $menu_icon;?>') no-repeat;
+    mask: url('<?php echo $menu_icon; ?>') no-repeat;
 }
 </style>
