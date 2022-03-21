@@ -75,7 +75,7 @@ function custom_post_type()
             "add_new_item" => "Neue Kategorie hinzufügen",
             "new_item_name" => "Neue Kategorie Name",
             "menu_name" => "Kategorien",
-            "slug" => "personen", // This controls the base slug that will display before each term
+            "slug" => "pers", // This controls the base slug that will display before each term
             "with_front" => false, // Don't display the category base before "/locations/"
             "hierarchical" => true, // This will allow URL's like "/locations/boston/cambridge/"
             "location" => "personen",
@@ -139,12 +139,15 @@ function custom_post_type()
                 "new_item_name" => __($customtaxonomy["nanew_item_nameme"]),
                 "menu_name" => __($customtaxonomy["menu_name"]),
             ],
+			"show_in_rest" => true,
+			
             // Control the slugs used for this taxonomy
             "rewrite" => [
                 "slug" => $customtaxonomy["slug"], // This controls the base slug that will display before each term
                 "with_front" => $customtaxonomy["with_front"], // Don't display the category base before "/locations/"
                 "hierarchical" => $customtaxonomy["hierarchical"], // This will allow URL's like "/locations/boston/cambridge/"
-            ],
+            ],			
+
         ];
 
         // Add new "Locations" taxonomy to Posts
@@ -184,7 +187,7 @@ function custom_post_type()
                 "revisions",
                 "custom-fields",
             ],
-            "taxonomies" => ["genres"],
+            "taxonomies" => ["objekte"],
             "hierarchical" => true,
             "public" => true,
             "show_ui" => true,
@@ -225,7 +228,7 @@ function custom_post_type()
                 "revisions",
                 "custom-fields",
             ],
-            "taxonomies" => ["genres"],
+            "taxonomies" => ["pers"],
             "hierarchical" => false,
             "public" => true,
             "show_ui" => true,
@@ -322,4 +325,6 @@ function custom_post_type()
 
 add_action("init", "custom_post_type", 0);
 
+
+add_filter( 'show_admin_bar', '__return_false' );
 ?>
