@@ -38,11 +38,11 @@
 				pointer-events: all;
 			}
 
-			&.active::before {
+			&.current-menu-item::before {
 				background: v.$color-primary-sm;
 			}
 
-			&.active::after {
+			&.current-menu-item::after {
 				width: 3px;
 				height: 34px;
 				background: v.$color-primary-sm;
