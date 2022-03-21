@@ -5,6 +5,7 @@
 	/* ---Vorschlag 1: Ticket 5 von 19px auf 22px--- */
 	width: 22px;
 	height: 22px;
+	max-width: unset;
 
 	&.mobile {
 
