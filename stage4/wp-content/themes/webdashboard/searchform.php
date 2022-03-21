@@ -7,8 +7,7 @@
  */
 
 ?>
-<form action="/" method="get">
-    <label for="search">Search in <?php echo home_url( '/' ); ?></label>
+<form action="/" method="get" class="search flex align-items__center">
     <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
-    <input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>assets/images/search.png" />
+    <input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/assets/images/search.svg" />
 </form>
