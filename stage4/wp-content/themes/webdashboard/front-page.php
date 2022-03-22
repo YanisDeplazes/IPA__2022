@@ -34,6 +34,9 @@
 
 
     get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'end') );  /* Loading End of main__Content */
+    
+    echo '</main>';
+
     get_footer(); 
    
    ?>
