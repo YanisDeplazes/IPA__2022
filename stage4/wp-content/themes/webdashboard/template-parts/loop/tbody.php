@@ -1,4 +1,4 @@
-<?php $key = $args['key'];
+<?php 
 
    /**
    * Assign TBody to the current loop
@@ -6,14 +6,17 @@
    * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
    */
 
+// Data
+$key = $args['key'];
+
 if ($key == 'mitarbeiter'){
-    get_template_part( 'template-parts/loop/mitarbeiter/tbody', 'tbody');  
+    echo fillMitarbeiter();
  }elseif($key == 'kunden'){
-     get_template_part( 'template-parts/loop/kunden/tbody', 'tbody');  
+    echo fillKunde();
  }elseif($key == 'projekte'){
-      get_template_part( 'template-parts/loop/projekte/tbody', 'tbody');  
+    echo fillProjekt();
  }elseif($key == 'plugins'){
-       get_template_part( 'template-parts/loop/plugins/tbody', 'tbody');  
+    echo fillPlugin();
  }elseif($key == 'servers'){
-      get_template_part( 'template-parts/loop/servers/tbody', 'tbody');  
+    echo fillServer();
 }?>
