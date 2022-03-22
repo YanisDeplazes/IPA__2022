@@ -22,4 +22,4 @@
    <body <?php body_class(); ?>>
    <?php 
    	get_template_part( 'template-parts/header/header', 'header' ); 
-	get_template_part( 'template-parts/layout/dynamiccss', 'dynamiccss' ); ?>
+   	get_template_part( 'template-parts/layout/dynamiccss', 'dynamiccss' ); ?>
