@@ -13,12 +13,13 @@
 
         // Get THead and Pass Key
         get_template_part( 'template-parts/loop/thead', 'thead', array('key'   => $key )); 
-        while ( have_posts() ) : the_post();
 
         // Get TBody and Pass Key
+        echo "<tbody>";
+        while ( have_posts() ) : the_post();
         get_template_part( 'template-parts/loop/tbody', 'tbody', array('key'   => $key ));
-        
         endwhile; 
+        echo "</tbody>";
 
         // End HTML Container
         echo '</table></div>';

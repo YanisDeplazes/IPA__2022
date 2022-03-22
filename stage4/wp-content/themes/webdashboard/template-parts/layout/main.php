@@ -12,7 +12,7 @@
         if(!empty($class)){
             echo '<main class="'. $class .'">';
         }else{
-            echo '<main>test';
+            echo '<main>';
         }
     }elseif($key == 'end'){
         echo '</main>'; 

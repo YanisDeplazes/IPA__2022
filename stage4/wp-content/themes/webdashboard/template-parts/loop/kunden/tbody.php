@@ -6,9 +6,9 @@
    */
 
    // Link as OnClick
-   echo '<tbody><tr onclick="window.location.href= \''. get_permalink() .'\'">';
+   echo '<tr onclick="window.location.href= \''. get_permalink() .'\'">';
 
-   // Ansprechperson
+   // Title
    echo '<td class="order1"><h6><a href="'. get_permalink() .'" class="nostyle">'. get_the_title() .'</a></h6></td>';
 
    // Ansprechperson
@@ -24,12 +24,17 @@
    while( $the_query->have_posts() ) : $the_query->the_post(); 
       $i++;
    endwhile; 
-      echo $i; 
+      if($i == 1){
+         echo '<p>'.$i.'<span class="block-small-only"> Projekt</span></p>'; 
+
+      }else{
+         echo '<p>'.$i.'<span class="block-small-only"> Projekte</span></p>'; 
+      }
    else:
-      echo '0';
+      echo '<p>'.$i.'<span class="block-small-only"> Projekte</span></p>'; 
    endif;
    wp_reset_query();	
    echo '</td>';
 
    // Details
-   echo '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() .'" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr></tbody>';
+   echo '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() .'" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr>';

@@ -7,7 +7,7 @@
 
 
    // Link as OnClick
-   echo '<tbody><tr onclick="window.location.href= \''. get_permalink() .'\'">';
+   echo '<tr onclick="window.location.href= \''. get_permalink() .'\'">';
 
    // Title
    echo '<td class="order2"><h6><a href="'. get_permalink() .'" class="nostyle">'. get_the_title() .'</a></h6></td>';
@@ -27,4 +27,4 @@
 
 
    // Details
-   echo '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() .'" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr></tbody>';
+   echo '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() .'" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr>';
