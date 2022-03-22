@@ -18,7 +18,6 @@
 	$serverCount = 0;
 	$kundenCount = 0;
 	$mitarbeiterCount = 0;
-
 	if ( have_posts() ) {
 		while ( have_posts() ) {
 			the_post();
@@ -68,6 +67,7 @@
 		}
 		echo "</tbody>";
 		echo '</table></div>';
+		get_template_part( 'template-parts/loop/pagination', 'pagination', array('key'   => $key )); 
 		get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end') );
 		get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end', 'hasWrapper' => true));
 	}
@@ -86,6 +86,7 @@
 		}
 		echo "</tbody>";
 		echo '</table></div>';
+		get_template_part( 'template-parts/loop/pagination', 'pagination', array('key'   => $key )); 
 		get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end') );
 		get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end', 'hasWrapper' => true));
 	}
@@ -103,6 +104,7 @@
 		}
 		echo "</tbody>";
 		echo '</table></div>';
+		get_template_part( 'template-parts/loop/pagination', 'pagination', array('key'   => $key )); 
 		get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end') );
 		get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end', 'hasWrapper' => true));
 	}
@@ -120,6 +122,7 @@
 		}
 		echo "</tbody>";
 		echo '</table></div>';
+		get_template_part( 'template-parts/loop/pagination', 'pagination', array('key'   => $key )); 
 		get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end') );
 		get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end', 'hasWrapper' => true)); 
 	}
@@ -137,6 +140,7 @@
 		}
 		echo "</tbody>";
 		echo '</table></div>';
+		get_template_part( 'template-parts/loop/pagination', 'pagination', array('key'   => $key )); 
 		get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end') );
 		get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end', 'hasWrapper' => true));
 	}
