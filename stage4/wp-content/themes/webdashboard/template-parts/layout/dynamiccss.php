@@ -10,12 +10,12 @@ $menu_icon = get_field( "menu_icon",  $id);
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
 }
 
-#menu-item-59::before {
+#menu-item-93::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/inhalte.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/inhalte.svg') no-repeat;
 }
 
-#menu-item-58::before {
+#menu-item-79::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/personen.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/personen.svg') no-repeat;
 }

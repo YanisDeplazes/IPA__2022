@@ -19,32 +19,18 @@
        get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'start')); 
        get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start', 'class' => 'intro','hasPadding' => true)); 
        echo '<h3 class="center-text">' . get_the_title() .'</h3>';
-
-
-
        foreach ( $taxs as $tax ) {
-       if ($tax->slug == 'projekte'){
-       /* Get Custom Fields and save as Variables*/
-        $verantwortlicher_mitarbeiter = get_field( "verantwortlicher_mitarbeiter" );
-        $cms = get_field( "cms" );
-        $web_stack = get_field( "web_stack" );
-        $url = get_field( "url" );
+         if ($tax->slug == 'projekte'){
+            /* ----- If it's Mitarbeiter Single Page -----*/
+            get_template_part( 'template-parts/post/intro-single-projekt','intro-single-projekt'); 
 
-         get_template_part( 'template-parts/post/table', 'table', array('tr'   => array(array('th' =>  'URL', 'td' => $url),array('th' =>  'Stack', 'td' => $web_stack ),array('th' =>  'CMS', 'td' => $cms),array('th' =>  'Verantwortung', 'td' => $verantwortlicher_mitarbeiter )),'title' => 'Übersicht' )); /* Intro Box */
-       }else{
-
-
-
-
-  
-
-        /* Creating Content Blocks*/
-        $firmaAdressefull = $firmaAdresse .'<br>'. $firmaPLZ .'<br>'. $firmaOrt; /* Combine Adresses into a variable*/
-        $ansprechpersonen = $ansprechperson . '</br><a class="nostyle" href="mailto:$email_ansprechperson">'. $email_ansprechperson . '</a>';
-
-
-       get_template_part( 'template-parts/post/table', 'table', array('tr'   => array(array('th' =>  'Firmaname', 'td' => $firmaName),array('th' =>  'Adresse', 'td' => $verantwortlicher_mitarbeiter )),'title' => 'Übersicht' )); /* Intro Box */
-       }}
+          }elseif($tax->slug == 'plugins'){
+            /* ----- If it's Kunden Single Page -----*/
+            get_template_part( 'template-parts/post/intro-single-plugin','intro-single-plugin'); 
+          }elseif($tax->slug == 'servers'){
+            /* ----- If it's Kunden Single Page -----*/
+            get_template_part( 'template-parts/post/intro-single-server','intro-single-server'); 
+          }}
        get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true)); 
        get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end')); 
 
@@ -60,7 +46,7 @@
           }elseif($tax->slug == 'plugins'){
             /* ----- If it's Kunden Single Page -----*/
             get_template_part( 'template-parts/post/grid-single-plugin','grid-single-plugin'); 
-          }else{
+          }elseif($tax->slug == 'servers'){
             /* ----- If it's Kunden Single Page -----*/
             get_template_part( 'template-parts/post/grid-single-server','grid-single-server'); 
           }

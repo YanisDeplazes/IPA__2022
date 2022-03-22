@@ -15,8 +15,8 @@
                          ),
                   	'meta_query' => array(
                   		array(
-                  			'key' => 'verantwortlicher_mitarbeiter', // name of custom field
-                  			'value' => '"' . $post->ID . '"', 
+                  			'key' => $args['key'], // name of custom field
+                  			'value' => $post->ID , 
                   			'compare' => 'LIKE'
                   		)
                   	)
@@ -33,8 +33,8 @@
       </tr>
       <?php endwhile; ?>
       <?php else: 
-               get_template_part( 'template-parts/loop/404', '404', array('size' => 'small')) ;?>
-         </div>
+    get_template_part( 'template-parts/loop/404', '404', array('size' => 'small', 'content' => 'Keine Elemente gefunden.')) ;?>
+    </div>
          <?php endif; ?>
       <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
    </table>

@@ -12,7 +12,11 @@
    get_template_part( 'template-parts/navigation/secondary', 'secondary' ) ;
    get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start') ); 
    get_template_part( 'template-parts/layout/loader', 'loader'); 
-   get_template_part( 'template-parts/page/sections/sectionwrapper', 'sectionwrapper', array('key'   => 'intro' , 'content'   => array('<h1>Error 404</h1><hr class="fullwidth">') ) ); 
+	get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'start')); 
+	get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start', 'hasPadding' => true)); /* Box Beginning */
+   get_template_part( 'template-parts/loop/404', '404', array('size' => 'big', 'content' => 'Error 404, Seite nicht gefunden.')) ;
+	get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true)); /* Box Ending */
+   get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end')); 
    get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'end') ); 
    get_footer(); 
    

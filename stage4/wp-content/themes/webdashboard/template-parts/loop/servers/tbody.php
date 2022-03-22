@@ -6,14 +6,7 @@
          <h6><a href="<?php echo get_permalink(); ?>" class="nostyle"><?php the_title();?></a></h6>
       </td>
       <td class="order2">
-         <?php $post_tags = get_the_terms( $post->ID, 'funktionen' );
-            if ( ! empty( $post_tags ) ) {
-               $i = 0;
-                foreach( $post_tags as $post_tag ) {
-                    echo '<a href="' . get_tag_link( $post_tag ) . '" class="nostyle">' . $post_tag->name . '</a>';
-                }
-            }   
-            ?></a>                  
+      <?php echo get_field('host');?>              
       </td>
       <td class="order3">
          <?php 
@@ -22,8 +15,8 @@
             	'post_type' => 'objekte',
             	'meta_query' => array(
             		array(
-            			'key' => 'verantwortlicher_mitarbeiter', // name of custom field
-            			'value' => '"' . $post->ID . '"', 
+            			'key' => array('ftp_server','datenbank_server','domain_server'), // Zählen aller  Servers
+            			'value' =>  $post->ID, 
             			'compare' => 'LIKE'
             		)
             	)
@@ -41,7 +34,9 @@
          <?php $i++; ?>
          <?php endwhile; ?>
          <?php echo $i; ?>
-         <?php endif; ?>
+         <?php else:
+            echo "0";
+         endif;?>
          <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
       </td>
       <td class="right-text order4">

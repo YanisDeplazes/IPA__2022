@@ -10,7 +10,7 @@
 		}
 	}
 
-	& i.active:hover::before {
+	& i.current-menu-item:hover::before , & i.current-menu-parent:hover::before {
 		background: v.$color-primary-sm;
 	}
 

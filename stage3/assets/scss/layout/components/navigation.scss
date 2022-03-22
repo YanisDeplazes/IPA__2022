@@ -38,11 +38,10 @@
 				pointer-events: all;
 			}
 
-			&.current-menu-item::before {
+			&.current-menu-item::before, &.current-menu-parent::before {
 				background: v.$color-primary-sm;
 			}
-
-			&.current-menu-item::after {
+			&.current-menu-item::after, &.current-menu-parent::after {
 				width: 3px;
 				height: 34px;
 				background: v.$color-primary-sm;
@@ -79,7 +78,7 @@
 			margin-block-start: 20px;
 			margin-block-end: 20px;
 
-			&.current-menu-item a {
+			&.current-menu-item a, &.current-menu-parent a{
 				display: none;
 			}
 		}

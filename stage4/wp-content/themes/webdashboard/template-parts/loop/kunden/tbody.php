@@ -9,32 +9,32 @@
         <p class="body-2"><?php echo get_field( "ansprechperson" );?></p>         
       </td>
       <td class="order3">
-         <?php 
+
+      <?php 
             // args
             $args = array(
             	'post_type' => 'objekte',
             	'meta_query' => array(
             		array(
             			'key' => 'kunde', // name of custom field
-            			'value' => '"' . $post->ID . '"', 
+            			'value' => $post->ID , 
             			'compare' => 'LIKE'
             		)
             	)
                   
             );
             
-            
             // query
-            $the_query = new WP_Query( $args );
-            
-            ?>
-         <?php if( $the_query->have_posts() ): ?>
-         <?php $i = 0;?>
-         <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-         <?php $i++; ?>
-         <?php endwhile; ?>
-         <?php echo $i; ?>
-         <?php endif; ?>
+            $the_query = new WP_Query( $args );      
+            if( $the_query->have_posts() ): 
+            $i = 0;
+            while( $the_query->have_posts() ) : $the_query->the_post(); 
+            $i++;
+            endwhile; 
+            echo $i; 
+        else:
+            echo "0";
+         endif;?>
          <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
       </td>
       <td class="right-text order4">

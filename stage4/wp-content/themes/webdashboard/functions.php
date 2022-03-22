@@ -181,7 +181,6 @@ function custom_post_type()
             "description" => "Diese Custom Post Types sind für alle Objekte zuständig",
             "supports" => [
                 "title",
-                "excerpt",
                 "thumbnail",
                 "revisions",
                 "custom-fields",
@@ -221,8 +220,6 @@ function custom_post_type()
             "description" => "Diese Custom Post Types sind für alle Personen zuständig",
             "supports" => [
                 "title",
-                "editor",
-                "excerpt",
                 "thumbnail",
                 "revisions",
                 "custom-fields",

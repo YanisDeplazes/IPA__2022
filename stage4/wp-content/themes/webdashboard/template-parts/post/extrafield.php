@@ -4,8 +4,8 @@
 if( have_rows('extra_fields') ):
    // Loop through rows.
    while( have_rows('extra_fields') ) : the_row();
-   $title = '<h5>' . get_sub_field('title') . '</h5>';
    get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start','hasPadding' => true)); /* Box Beginning */
+   $title = '<h5>' . get_sub_field('title') . '</h5>';
    echo '<div class="loop-wrapper"><table class="loop simple">';
    $content = get_sub_field('table_view');
        while( have_rows('table_view') ) : the_row();

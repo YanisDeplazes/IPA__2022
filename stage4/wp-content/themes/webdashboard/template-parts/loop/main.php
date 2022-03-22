@@ -8,5 +8,5 @@ endwhile;
 echo '</table></div>';
 get_template_part( 'template-parts/loop/pagination', 'pagination', array('key'   => $key )); 
 else : 
-    get_template_part( 'template-parts/loop/404', '404', array('size' => 'big')) ;
+    get_template_part( 'template-parts/loop/404', '404', array('size' => 'big', 'content' => 'Keine Elemente gefunden.')) ;
 endif;
