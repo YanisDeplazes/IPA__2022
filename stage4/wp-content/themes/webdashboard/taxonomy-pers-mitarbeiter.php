@@ -10,7 +10,7 @@
       $current_user = wp_get_current_user(); /* Get User */
       $user_name = $current_user->user_firstname . ' ' . $current_user->user_lastname; /* First + Lastname */
       
-      echo '<main class="project">';
+      echo '<main class="personen">';
       get_template_part( 'template-parts/navigation/primary', 'primary' ); /* Loading Primary Navigation */
       get_template_part( 'template-parts/navigation/secondary', 'secondary', array('key'   => 'personen') ) ; /* Loading Secondary Navigation */
       get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start', 'fullwidth'   => true) );  /* Loading Beginning of main__Content */
@@ -19,6 +19,7 @@
       get_template_part( 'template-parts/loop/main', 'main', array('key'   => 'mitarbeiter' )); /* Box Beginning */
       get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end')); /* Box Beginning */
       get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'end') );  /* Loading End of main__Content */
+      echo'</main>';
       get_footer(); 
 
    ?>
