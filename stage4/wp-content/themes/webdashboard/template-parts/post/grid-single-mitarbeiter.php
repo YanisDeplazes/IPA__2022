@@ -1,12 +1,22 @@
 <?php 
-            /*Projekt Simple Loop*/
-            get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start','hasPadding' => true)); /* Box Beginning */
-            get_template_part( 'template-parts/loop/simple', 'simple', array('terms' => 'projekte', 'title' => 'Projekte', 'key' => 'v_mitarbeiter')); /* Box Content / Simple Loop */
-            get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true));  /* Box Ending */
 
-            /*Plugins Simple Loop*/
-            get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start','hasPadding' => true)); /* Box Beginning */
-            get_template_part( 'template-parts/loop/simple', 'simple', array('terms' => 'plugins', 'title' => 'Plugins', 'key' => 'v_mitarbeiter')); /* Box Content / Simple Loop */
-            get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true));  /* Box Ending */
+   /**
+   * Grid Template Mitarbeiter for Server Single Page
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   */
 
-            get_template_part( 'template-parts/post/extrafield', 'extrafield');  /* Box Extra Fields */
+   // Reverse Relationship Loop (Assigned projects)
+   $title = 'Projekte';
+   get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start','hasPadding' => true)); 
+   get_template_part( 'template-parts/loop/simple', 'simple', array('terms' => $title, 'title' => 'Projekte', 'key' => 'v_mitarbeiter')); 
+   get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true));  
+
+   // Reverse Relationship Loop (Assigned plugins)
+   $title = 'Plugins';
+   get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start','hasPadding' => true));
+   get_template_part( 'template-parts/loop/simple', 'simple', array('terms' => 'plugins', 'title' => $title, 'key' => 'v_mitarbeiter')); 
+   get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true));
+
+   // Extrafields
+   get_template_part( 'template-parts/post/extrafield', 'extrafield');  

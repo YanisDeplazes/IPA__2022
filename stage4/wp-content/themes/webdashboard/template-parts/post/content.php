@@ -1,7 +1,11 @@
 <?php 
 
-/* This Code Outputs the content within the body-2 paragraphy styling. Used on Single(Post) Page */
+   /**
+   * Content Template for any Single Page
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   */
 
-echo '<h5>'. $args['title'] .'</h5><hr class="fullwidth"><p class="body-2">'. $args['content'] .'</p>';  /* Output of  Content and title*/
+    echo '<h5>'. $args['title'] .'</h5><hr class="fullwidth"><p class="body-2">'. $args['content'] .'</p>'; 
 
 ?>

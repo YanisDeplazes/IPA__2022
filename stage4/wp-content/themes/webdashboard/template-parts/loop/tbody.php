@@ -1,5 +1,11 @@
 <?php $key = $args['key'];
 
+   /**
+   * Assign TBody to the current loop
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   */
+
 if ($key == 'mitarbeiter'){
     get_template_part( 'template-parts/loop/mitarbeiter/tbody', 'tbody');  
  }elseif($key == 'kunden'){

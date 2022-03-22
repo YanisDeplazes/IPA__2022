@@ -1,5 +1,12 @@
 <?php $key = $args['key'];
 
+   /**
+   * Assign THead to the current loop
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   */
+
+
 if ($key == 'mitarbeiter'){
     get_template_part( 'template-parts/loop/mitarbeiter/thead', 'thead');  
  }elseif($key == 'kunden'){

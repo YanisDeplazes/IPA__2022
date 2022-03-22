@@ -1,7 +1,11 @@
 <?php 
-
-$id = get_the_ID();
-$menu_icon = get_field( "menu_icon",  $id); 
+   /**
+   * Dynamic CSS with Links
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   */
+    $id = get_the_ID();
+    $menu_icon = get_field( "menu_icon",  $id); 
 ?>
 
 <style>
