@@ -13,7 +13,7 @@
    echo '<td class="order1"><h6><a href="'. get_permalink() .'" class="nostyle">'. get_the_title() .'</a></h6></td>';
 
    // Funktion(en)
-   echo '<td class="order2">'
+   echo '<td class="order2">';
    $post_tags = get_the_terms( $post->ID, 'funktionen' );
    if ( ! empty( $post_tags ) ) {
       $i = 0;
@@ -21,7 +21,7 @@
          echo '<p class="body-2"><a href="' . get_tag_link( $post_tag ) . '" class="nostyle">' . $post_tag->name . '</a></p>';
       }
    }   
-   echo '</td>'
+   echo '</td>';
 
    // Count Projekts
    echo '<td class="order3">';
@@ -36,7 +36,7 @@
    else:
       echo '0';
    endif;
-   wp_reset_query();	 /
+   wp_reset_query();	 
    echo '</td>';
    
    // Details
