@@ -4,12 +4,14 @@
     *
     * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
     */
+      // Set Active Menu Icon
+      get_menu_icon("personen");
       
       // Base Layout Start
       get_header();
       get_template_part( 'template-parts/layout/main', 'main', array('key' => 'start', 'class' => 'personen') );
       get_template_part( 'template-parts/navigation/primary', 'primary' );
-      get_template_part( 'template-parts/navigation/secondary', 'secondary', array('key'   => 'personen') ); 
+      get_template_part( 'template-parts/navigation/secondary', 'secondary', array('key'   => 'personen', 'term' => 'Mitarbeiter') ); 
       get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start', 'fullwidth'   => true) );
       get_template_part( 'template-parts/layout/loader', 'loader');
 

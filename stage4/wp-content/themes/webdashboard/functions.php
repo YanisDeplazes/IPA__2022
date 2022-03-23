@@ -352,5 +352,17 @@ function fillServer()
                 
             }
 
+            // Menu Icons
+            function get_menu_icon($tax)
+            {
+                if($tax == "personen"){
+                    $GLOBALS["menu_icon"] = get_template_directory_uri() . '/assets/images/personen.svg';
+
+                }elseif($tax == "inhalte"){
+                    $GLOBALS["menu_icon"] = get_template_directory_uri() . '/assets/images/inhalte.svg';
+                }
+            }
+            
+
 
 ?>
