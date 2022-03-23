@@ -46,7 +46,7 @@
 
         // Section with grid and its content
         get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'start', 'class' => 'grid align-items__space-between')); 
-        if ($taxonomy->slug == 'mitarbeiter'){
+        if ($taxonomy == 'mitarbeiter'){
           get_template_part( 'template-parts/post/grid-single-mitarbeiter','grid-single-mitarbeiter'); 
         }else{
           get_template_part( 'template-parts/post/grid-single-kunde','grid-single-kunde'); 

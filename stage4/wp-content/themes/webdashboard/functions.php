@@ -168,6 +168,25 @@ function fillProjekt()
     return $content;
 }
 
+function fillProjektStatus()
+{
+    $url = get_field('check_url');
+    $version = get_project_wp_version($url);
+    $content = '<tr onclick="window.location.href= \'' . get_permalink() . '\'">';
+    $content .= '<td class="order1"><h6><a href="' . get_permalink() . '" class="nostyle">' . get_the_title() . '</a></h6></td>';
+    $kunde = get_field('kunde', $post->ID);
+    $content .= '<td class="order2">';
+    $content .= '<a href="' . get_the_permalink($kunde->ID) . '" class="nostyle">' . $kunde->post_title . '</a>';
+    $content .= '</td>';
+    $content .= '<td class="order1">';
+    $content .= wordpress_stablecheck($version);
+    $content .= '</td>';
+    $content .= '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() . '" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr>';
+    return $content;
+}
+
+
+
 function fillPlugin()
 {
     $content = '<tr onclick="window.location.href= \'' . get_permalink() . '\'">';
@@ -232,6 +251,20 @@ function fillServer()
         $content .= '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() . '" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr>';
         return $content;
     }
+    function fillServerStatus()
+    {
+    $version = get_server_php_version(get_field('check_url'));
+    $content = '<tr onclick="window.location.href= \'' . get_permalink() . '\'">';
+    $content .= '<td class="order2"><h6><a href="' . get_permalink() . '" class="nostyle">' . get_the_title() . '</a></h6></td>';
+    $content .= '<td class="order3">' . get_field('host') . '</td>';
+    $content .= '<td class="order1">';
+    $content .= php_version_checker($version);
+    $content .= '</td>';
+    $content .= '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() . '" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr>';
+    return $content;
+    }
+
+
 
     function fillKunde()
     {
@@ -324,7 +357,7 @@ function fillServer()
                 $content .= '</td>';
                 $content .= '<td class="right-text order4"><div class="details-wrapper"><a href="' . get_permalink() . '" class="nostyle"><div class="details"><span></span><span></span><span></span></div></a></div></td></tr>';
                 return $content;
-            }
+        }
 
             // Change Post per Range Limit for Search
             function change_wp_search_size($query)
