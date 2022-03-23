@@ -30,7 +30,9 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-
+.inhalte #menu-item-93 a, .personen #menu-item-79 a{
+    color: #009ba9;
+}
 #menu-item-60::before {
     -webkit-mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
     mask: url('<?php echo get_template_directory_uri();?>/assets/images/uebersicht.svg') no-repeat;
@@ -55,11 +57,4 @@
     -webkit-mask: url('<?php echo $GLOBALS["menu_icon"];?>') no-repeat;
     mask: url('<?php echo $GLOBALS["menu_icon"]; ?>') no-repeat;
 }
-
-table th, table td{
-    word-wrap: break-word;
-    max-width: 150px;
-}
-
-
 </style>

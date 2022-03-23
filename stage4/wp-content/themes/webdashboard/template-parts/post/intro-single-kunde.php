@@ -14,7 +14,6 @@
   $firmaOrt = get_field( "ort" );
   $ansprechperson = get_field( "ansprechperson" );
   $email_ansprechperson = get_field( "e-mail_ansprechperson" );
-  $firmaAdressefull = $firmaAdresse .'<br>'. $firmaPLZ .'<br>'. $firmaOrt;
   $title = 'Übersicht';
 
   // Table Start
@@ -32,9 +31,18 @@
   $content .= '
   <tr>
      <th class="overline">Adresse</th>
-     <td class="body-2 left-text">'. $firmaAdressefull .'</td>
+     <td class="body-2 left-text">'. $firmaAdresse .'</td>
   </tr>';
-
+  $content .= '
+  <tr>
+     <th class="overline"></th>
+     <td class="body-2 left-text">'. $firmaPLZ .'</td>
+  </tr>';
+  $content .= '
+  <tr>
+     <th class="overline"></th>
+     <td class="body-2 left-text">'. $firmaOrt .'</td>
+  </tr>';
   // Table End
   $content .= '</table></div>';
 

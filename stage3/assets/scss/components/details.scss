@@ -22,4 +22,8 @@
 		background-color: v.$color-layout-grey;
 
 	}
+	&-wrapper a{
+		display: flex;
+		align-items: center;
+	}
 }

@@ -1,6 +1,9 @@
 /* ---Loop--- */
 
 .loop {
+    & th{
+        vertical-align: top;
+    }
 
     &.main {
         & table {
@@ -20,15 +23,25 @@
             & td {
                 padding-left: var(--box-padding-v);
                 padding-right: var(--box-padding-v);
+                &:nth-last-child(2){
+                    text-align: right;
+                }
+                &:nth-last-child(3){
+                    width: 100%;
+                }
             }
 
             & td {
                 padding-top: 22px;
                 padding-bottom: 22px;
+                &:first-child h6{
+                    width: 300px;
+
+                }
+                
             }
 
             & th {
-
                 padding-top: 12px;
                 padding-bottom: 12px;
             }
@@ -37,11 +50,20 @@
                 position: relative;
                 right: -6px;
             }
+            & .body-2{
+                min-width: 200px;
+            }
+        }
+    }
+
+    &.simple{
+        & th{
+            padding-right: 25px;
         }
     }
 
     &-wrapper {
         overflow-x: auto;
-
     }
 }
+

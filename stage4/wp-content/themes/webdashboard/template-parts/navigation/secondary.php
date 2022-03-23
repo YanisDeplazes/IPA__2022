@@ -13,9 +13,9 @@
       
       //Check What Navigation should be used
       if ($key == 'personen'){
-         wp_nav_menu( array('theme_location' => 'navigation-secondary-personen',) ); 
+         wp_nav_menu( array('theme_location' => 'navigation-personen', 'menu_class' => 'block-medium') ); 
       }else{
-         wp_nav_menu( array('theme_location' => 'navigation-secondary-inhalte',) ); 
+         wp_nav_menu( array('theme_location' => 'navigation-inhalte', 'menu_class' => 'block-medium') ); 
       }      
 
 echo '<img onclick="toggleSecondnavigation(\'desktop\')" src="' . get_template_directory_uri() .'/assets/images/collapse.svg" class="collapse desktop" alt="Collapse"></div></div>';

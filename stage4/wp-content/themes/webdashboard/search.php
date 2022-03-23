@@ -33,14 +33,14 @@
 					$plugin = array($content => fillPlugin());
 					$plugins[] = $plugin;
 				}elseif($taxonomy == "servers"){
-					$kundenCount++;
+					$serverCount++;
 					$server = array($content => fillServer());
 					$servers[] = $server;
 				}elseif($taxonomy == "kunden"){
 					$kundenCount++;
 					$kunde = array($content => fillKunde());
 					$kunden[] = $kunde;
-				}elseif($taxonomy == "mitarbeiter"){
+				}else{
 					$mitarbeiterCount++;
 					$mitarbeit = array($content => fillMitarbeiter());
 					$mitarbeiter[] = $mitarbeit;
@@ -50,7 +50,7 @@
 		} 
 		// Post Navigation
 	} else {
-		//No Post Found
+        get_template_part( 'template-parts/loop/404', '404', array('size' => 'big', 'content' => 'Keine Elemente gefunden.')) ;
 	}
 
 	if($projectsCount > 0){

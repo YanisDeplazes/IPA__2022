@@ -31,7 +31,7 @@
                <th class="overline">Web Stack</th>
                <td class="body-2 right-text">';
                   foreach ($web_stack as $web_stack_item) {
-                     $content .= $web_stack_item .'<br>';
+                     $content .= '<span class="web_stack">'. $web_stack_item .'</span>';
                   }  
             $content .= '</td></tr>';
       }

@@ -6,16 +6,18 @@
     */
     
       // Data
+      get_menu_icon("inhalte");
       $taxs = get_the_terms( $postID, 'obj' ); 
       foreach ( $taxs as $tax ) {
         $taxonomy = $tax->slug;
+        $term = ucfirst($taxonomy);
       }
 
       // Base Layout Start
       get_header();
       get_template_part( 'template-parts/layout/main', 'main', array('key' => 'start', 'class' => 'inhalte project '. $taxonomy.'',) );
       get_template_part( 'template-parts/navigation/primary', 'primary' );
-      get_template_part( 'template-parts/navigation/secondary', 'secondary', array('key'   => 'objekte') ); 
+      get_template_part( 'template-parts/navigation/secondary', 'secondary', array('key'   => 'objekte', 'term' => $term) ); 
       get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start', 'fullwidth'   => false) );
       get_template_part( 'template-parts/layout/loader', 'loader');
 
