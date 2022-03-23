@@ -25,14 +25,10 @@
         }
         if(!empty($title)){
             echo '<h4>'. $title .'</h4>';
-
+            echo '</div>';
         }
     
     }elseif($key == 'end'){
-        // Check if Section has Wrapper modifier */
-        if($hasWrapper){
-            echo '</div>';
-        }
         echo '</section>'; 
     }else{
         echo 'something went wrong';
