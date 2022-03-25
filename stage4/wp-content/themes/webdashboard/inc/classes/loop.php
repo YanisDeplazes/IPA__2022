@@ -11,11 +11,9 @@ class TableLoop
     
     
     //returns the data of the header line. Depending on the type, a different header line is output accordingly. 
-    private function get_header($type)
+    private function get_header()
     {
-        if(!empty($type)){
-            $this->type = $type;
-        }
+  
         $return = '<div class="loop-wrapper"><table class="loop">';
         
         if ($this->type == 'mitarbeiter') {
