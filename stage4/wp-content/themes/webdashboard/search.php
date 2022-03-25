@@ -8,16 +8,38 @@
  *
  */
    
-    get_header();
-	get_template_part( 'template-parts/layout/main', 'main', array('key' => 'start', 'class' => 'inhalte') );
-	get_template_part( 'template-parts/navigation/primary', 'primary' );
-	get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start', 'fullwidth'   => true) );
-	get_template_part( 'template-parts/layout/loader', 'loader');
+
+
+$settings = array('hasSecondnavigation' => false,'isFullwidth' => true, 'class' => 'personen', 'term' => 'mitarbeiter');
+$layout = new Layout($settings);
+$layout->get_layout_header();
+
+
+$projectsCount = 0;
+$pluginsCount = 0;
+$serverCount = 0;
+$kundenCount = 0;
+$mitarbeiterCount = 0;
+
+
+$settings = array('isSearch' => true);
+$loop = new TableLoop($settings);
+echo $loop->get_table();
+
+
+$layout->get_layout_footer();
+
+
+
+
+	/*echo get_layout(array('key' => 'start','hasSecondnavigation' => false,'isFullwidth' => false));
+
 	$projectsCount = 0;
 	$pluginsCount = 0;
 	$serverCount = 0;
 	$kundenCount = 0;
 	$mitarbeiterCount = 0;
+	
 	if ( have_posts() ) {
 		while ( have_posts() ) {
 			the_post();
@@ -26,23 +48,23 @@
 				$taxonomy = $tax->slug;
 				if($taxonomy == "projekte"){
 					$projectsCount++;
-					$project = array($content => fillProjekt());
+					$project = array($content => fill_tbody('projekte'));
 					$projects[] = $project;
 				}elseif($taxonomy == "plugins"){
 					$pluginsCount++;
-					$plugin = array($content => fillPlugin());
+					$plugin = array($content => fill_tbody('plugins'));
 					$plugins[] = $plugin;
 				}elseif($taxonomy == "servers"){
 					$serverCount++;
-					$server = array($content => fillServer());
+					$server = array($content => fill_tbody('servers'));
 					$servers[] = $server;
 				}elseif($taxonomy == "kunden"){
 					$kundenCount++;
-					$kunde = array($content => fillKunde());
+					$kunde = array($content => fill_tbody('kunden'));
 					$kunden[] = $kunde;
 				}else{
 					$mitarbeiterCount++;
-					$mitarbeit = array($content => fillMitarbeiter());
+					$mitarbeit = array($content => fill_tbody('mitarbeiter'));
 					$mitarbeiter[] = $mitarbeit;
 				}
 			}
@@ -52,6 +74,7 @@
 	} else {
         get_template_part( 'template-parts/loop/404', '404', array('size' => 'big', 'content' => 'Keine Elemente gefunden.')) ;
 	}
+	
 
 	if($projectsCount > 0){
 		$key="projekte";
@@ -145,10 +168,6 @@
 		get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end', 'hasWrapper' => true));
 	}
 
+	echo get_layout(array('key' => 'end'));*/
 
-    // Base Layout End
-    get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'end') );
-    get_template_part( 'template-parts/layout/main', 'main', array('key' => 'end') );
-
-    get_footer(); 
 

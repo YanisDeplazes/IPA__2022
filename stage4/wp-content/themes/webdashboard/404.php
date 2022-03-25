@@ -6,18 +6,12 @@
     *
     */
    
-   get_header();
-   echo '<main class="project">';
-   get_template_part( 'template-parts/navigation/primary', 'primary' ); 
-   get_template_part( 'template-parts/navigation/secondary', 'secondary' ) ;
-   get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'start') ); 
-   get_template_part( 'template-parts/layout/loader', 'loader'); 
-	get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'start')); 
-	get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'start', 'hasPadding' => true)); /* Box Beginning */
-   get_template_part( 'template-parts/loop/404', '404', array('size' => 'big', 'content' => 'Error 404, Seite nicht gefunden.')) ;
-	get_template_part( 'template-parts/components/box/box', 'box', array('key'   => 'end','hasPadding' => true)); /* Box Ending */
-   get_template_part( 'template-parts/layout/section', 'section', array('key'   => 'end')); 
-   get_template_part( 'template-parts/layout/main__content', 'main__content', array('key'   => 'end') ); 
-   get_footer(); 
-   
+
+
+    $settings = array('hasSecondnavigation' => false,'isFullwidth' => false, 'class' => 'ubersicht', 'type' => 'ubersicht', 'term' => 'ubersicht');
+    $layout = new Layout($settings);
+    $layout->get_layout_header();
+    $return = '<div class="center-text"><img src="' . get_template_directory_uri() . '/assets/images/notfound.svg" alt="Previous" width="250"><h3 style="margin-top: 30px;"> Error 404, Seite nicht gefunden</h3>';
+    echo $return;
+    $layout->get_layout_footer();
    ?>

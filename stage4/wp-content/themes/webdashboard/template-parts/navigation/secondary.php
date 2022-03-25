@@ -7,7 +7,7 @@
    */
 
    $key = $args['key']; 
-   $title = $args['term'];
+   $title = $args['title'];
 
    echo '<div class="navigation secondary site-margin"><div class="base__padding horizontal vertical"><div class="block-small-only current-menu-item flex align-items__center"><h5 class="current-menu-item">'.$title.'</h5><img onclick="toggleSecondnavigation(\'mobile\')" src="' . get_template_directory_uri() .'/assets/images/collapse.svg" class="collapse mobile" alt="Collapse"></div>';
       

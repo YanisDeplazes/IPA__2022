@@ -15,11 +15,11 @@
     display: none;
 }
 
-.inhalte #menu-item-93::before, .personen #menu-item-79::before{
+.tax-obj #menu-item-93::before, .tax-pers #menu-item-79::before, .single-objekte #menu-item-93::before, .single-personen #menu-item-79::before{
     background: #009ba9;
 }
 
-.inhalte #menu-item-93::after, .personen #menu-item-79::after{
+.tax-obj #menu-item-93::after, .tax-pers #menu-item-79::after, .single-objekte #menu-item-93::after,.single-personen #menu-item-79::after {
     width: 3px;
     height: 34px;
     background: #009ba9;
@@ -30,7 +30,7 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.inhalte #menu-item-93 a, .personen #menu-item-79 a{
+.tax-obj #menu-item-93 a, .tax-pers #menu-item-79 a, .single-objekte #menu-item-93 a, .single-personen #menu-item-79 a{
     color: #009ba9;
 }
 #menu-item-60::before {

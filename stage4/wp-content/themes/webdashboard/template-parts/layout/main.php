@@ -6,10 +6,10 @@
    */
 
     $key = $args['key'];
-    $class = $args['class'];
 
     if($key == 'start'){
         if(!empty($class)){
+            $class = $args['class'];
             echo '<main class="'. $class .'">';
         }else{
             echo '<main>';
